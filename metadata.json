@@ -1,0 +1,8 @@
+{
+  "name": "星辰之影：永恆覺醒 - 官方網站",
+  "description": "2025 年度史詩級 MMORPG 鉅作，探索無縫開放世界。",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ]
+}
