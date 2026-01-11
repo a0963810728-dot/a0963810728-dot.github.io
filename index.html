@@ -14,7 +14,6 @@
         scroll-behavior: smooth;
         overflow-x: hidden;
       }
-      /* 金色漸層樣式 */
       .gold-text {
         background: linear-gradient(to bottom, #fceabb 0%, #fccd4d 50%, #f8b500 51%, #fbdf93 100%);
         -webkit-background-clip: text;
@@ -23,34 +22,10 @@
       .gold-bg {
         background: linear-gradient(to bottom, #bf953f, #fcf6ba, #b38728, #fbf5b7, #aa771c);
       }
-      .gold-border {
-        border: 1px solid #b38728;
-      }
-      
-      ::-webkit-scrollbar { width: 6px; }
-      ::-webkit-scrollbar-track { background: #000000; }
-      ::-webkit-scrollbar-thumb { 
-        background: #b38728;
-        border-radius: 10px;
-      }
-      
-      .btn-gold {
-        background: linear-gradient(135deg, #bf953f, #aa771c);
-        color: #000000;
-        font-weight: 900;
-        box-shadow: 0 0 15px rgba(179, 135, 40, 0.4);
-        transition: all 0.3s;
-      }
-      .btn-gold:hover {
-        box-shadow: 0 0 25px rgba(252, 246, 186, 0.6);
-        transform: translateY(-2px);
-      }
-      
       .section-title {
         border-left: 4px solid #b38728;
         padding-left: 1rem;
       }
-
       @keyframes float {
         0%, 100% { transform: translateY(0); }
         50% { transform: translateY(-20px); }
@@ -58,7 +33,12 @@
       .animate-float {
         animation: float 6s ease-in-out infinite;
       }
-
+      .btn-gold {
+        background: linear-gradient(135deg, #bf953f, #aa771c);
+        color: #000000;
+        font-weight: 900;
+        transition: all 0.3s;
+      }
       .custom-scrollbar::-webkit-scrollbar {
         width: 4px;
       }
@@ -79,7 +59,11 @@
     </script>
   </head>
   <body>
-    <div id="root"></div>
+    <div id="root">
+      <div style="height: 100vh; display: flex; align-items: center; justify-content: center; background: #000; color: #b38728; font-weight: bold; letter-spacing: 0.5em;">
+        正在喚醒星辰之力...
+      </div>
+    </div>
     <script type="module" src="./index.tsx"></script>
   </body>
 </html>

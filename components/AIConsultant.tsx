@@ -1,11 +1,11 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { getGeminiResponse } from '../services/geminiService';
-import { Message } from '../types';
+import { getGeminiResponse } from '../services/geminiService.ts';
+import { Message } from '../types.ts';
 
 const AIConsultant: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [messages, setMessages] = useState<Message[]>([
-    { role: 'model', text: '你好，勇敢的冒險者！我是引導精靈露娜。星辰大陸充滿了未知，需要我為你指引前進的方向嗎？' }
+    { role: 'model', text: '你好，勇敢的冒險者！我是引導精靈露娜。需要我為你指引方向嗎？' }
   ]);
   const [input, setInput] = useState('');
   const [isLoading, setIsLoading] = useState(false);
@@ -33,7 +33,6 @@ const AIConsultant: React.FC = () => {
     <div className="fixed bottom-10 right-10 z-[100]">
       {isOpen ? (
         <div className="w-80 sm:w-96 h-[500px] border border-[#b38728]/30 rounded-3xl shadow-2xl flex flex-col overflow-hidden mb-4 bg-black">
-          {/* Header */}
           <div className="p-4 bg-gradient-to-r from-[#1a1a1a] to-[#000000] text-white flex justify-between items-center border-b border-[#b38728]/30">
             <div className="flex items-center space-x-3">
               <div className="w-10 h-10 rounded-full border-2 border-[#b38728] overflow-hidden bg-slate-800">
@@ -49,7 +48,6 @@ const AIConsultant: React.FC = () => {
             </button>
           </div>
 
-          {/* Chat Content */}
           <div ref={scrollRef} className="flex-1 overflow-y-auto p-5 space-y-4 bg-slate-950/80 backdrop-blur-xl custom-scrollbar">
             {messages.map((msg, idx) => (
               <div key={idx} className={`flex ${msg.role === 'user' ? 'justify-end' : 'justify-start'}`}>
@@ -73,7 +71,6 @@ const AIConsultant: React.FC = () => {
             )}
           </div>
 
-          {/* Input Area */}
           <div className="p-4 bg-[#0a0a0a] border-t border-[#b38728]/20 flex space-x-2">
             <input 
               type="text" 

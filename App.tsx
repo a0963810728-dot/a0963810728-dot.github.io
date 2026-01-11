@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-import Header from './components/Header';
-import Hero from './components/Hero';
-import Features from './components/Features';
-import AIConsultant from './components/AIConsultant';
-import Footer from './components/Footer';
-import { siteConfig } from './siteConfig';
+import Header from './components/Header.tsx';
+import Hero from './components/Hero.tsx';
+import Features from './components/Features.tsx';
+import AIConsultant from './components/AIConsultant.tsx';
+import Footer from './components/Footer.tsx';
+import { siteConfig } from './siteConfig.ts';
 
 const App: React.FC = () => {
   const [gearTab, setGearTab] = useState('裝備');
@@ -38,14 +38,13 @@ const App: React.FC = () => {
                <div className="absolute inset-0 flex items-center justify-center">
                  <div className="text-center p-6 bg-black/60 backdrop-blur-sm border border-[#b38728]/30">
                    <p className="text-[#fccd4d] font-bold tracking-widest mb-2">HOT EVENT</p>
-                   <h3 className="text-2xl font-black">星辰祭典：雙倍經驗大放送</h3>
+                   <h3 className="text-2xl font-black text-white">星辰祭典：雙倍經驗大放送</h3>
                  </div>
                </div>
             </div>
           </div>
         </section>
 
-        {/* 特色系統 Section */}
         <Features />
 
         {/* 裝備與武器介紹 Section */}
